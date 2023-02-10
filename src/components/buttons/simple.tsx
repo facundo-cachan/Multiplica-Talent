@@ -1,11 +1,11 @@
-import {Text, TouchableOpacity} from 'react-native';
+import { Text, TouchableOpacity } from 'react-native'
 
-import {Icons, colorCommon, sizeCommon} from '@components';
-import {colors, fonts, fontsSizes} from '@styles/theme';
+import { Icons, colorCommon, sizeCommon } from '@components'
+import { colors, fonts, fontsSizes } from '@styles/theme'
 
-import styles from '@styles/screens';
+import styles from '@styles/screens'
 
-import type {ButtonProps} from '.';
+import type { ButtonProps } from '.'
 
 type Props = ButtonProps;
 
@@ -23,7 +23,10 @@ const Simple = ({
   size,
   variant,
   onPress,
-}: Props): JSX.Element => (
+}: Props): JSX.Element => {
+  console.log(contentStyle);
+  
+  return (
   <TouchableOpacity
     onPress={onPress}
     disabled={Boolean(disabled)}
@@ -61,6 +64,6 @@ const Simple = ({
       {iconRight && <Icons.FontAwesome5 color={color} {...iconRight} />}
     </Text>
   </TouchableOpacity>
-);
+);}
 
 export default Simple;
