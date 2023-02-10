@@ -10,21 +10,10 @@
 
 import FlashMessage from 'react-native-flash-message'
 
-import { USER_KEY } from '@env'
-import { deleteData } from '@utils/_storage'
-
 import AppNavigation from '@navigation/'
 import { AppProvider } from '@providers/providerContext'
-import { useEffect } from 'react'
 
-const App = () => {
-  useEffect(() => {
-    (async () => {
-      await deleteData('skip-intro')
-      await deleteData(USER_KEY)
-    })()
-  }, [])
-  return (
+const App = () => (
     <AppProvider>
       <AppNavigation />
       {/* @ts-ignore */}
@@ -41,6 +30,5 @@ const App = () => {
       />
     </AppProvider>
   )
-}
 
 export default App

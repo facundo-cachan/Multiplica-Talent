@@ -2,9 +2,9 @@ import { colors } from './theme'
 
 const styles = {
   colors: {
-    background: colors.primary,
+    background: colors.background,
     border: colors.background,
-    card: colors.background,
+    card: colors.secondary,
     notification: colors.secondary,
     primary: colors.primary,
     text: colors.background,
@@ -23,6 +23,9 @@ const styles = {
   text: {
     color: colors.secondary,
   },
+  textGrey: {
+    color: '#9B9898'
+  }
 }
 
 export default styles
