@@ -210,7 +210,11 @@ const fontFamily = Platform.OS === 'ios' ? 'Arial' : 'Fontiso',
   colors = {
     background: '#e09085a1',
     primary: '#000',
+<<<<<<< Updated upstream
     secondary: '#fff',
+=======
+    secondary: '#334FFA',
+>>>>>>> Stashed changes
   };
 
 export type ThemeProps = {

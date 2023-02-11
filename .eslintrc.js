@@ -39,6 +39,7 @@ module.exports = {
     'no-dupe-keys': 'error',
     'no-duplicate-imports': 'error',
     'space-in-parens': 'error',
+    'sort-keys': ['error', 'asc', { 'caseSensitive': true, 'natural': false, 'minKeys': 2 }],
     'prettier/prettier': 'error',
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
