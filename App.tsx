@@ -14,20 +14,21 @@ import AppNavigation from '@navigation/'
 import { AppProvider } from '@providers/providerContext'
 
 const App = () => (
-      <AppNavigation />
-      {/* @ts-ignore */}
-      <FlashMessage
-        position="top"
-        style={{
-          borderRadius: 25,
-          maxWidth: '70%',
-          minWidth: '70%',
-          alignSelf: 'center',
-          alignItems: 'center',
-        }}
-        floating
-      />
-    </AppProvider>
-  )
+  <AppProvider>
+    <AppNavigation />
+    {/* @ts-ignore */}
+    <FlashMessage
+      position="top"
+      style={{
+        borderRadius: 25,
+        maxWidth: '70%',
+        minWidth: '70%',
+        alignSelf: 'center',
+        alignItems: 'center',
+      }}
+      floating
+    />
+  </AppProvider>
+)
 
 export default App
