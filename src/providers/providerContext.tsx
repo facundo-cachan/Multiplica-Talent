@@ -1,5 +1,4 @@
 import { createContext, useMemo, useState } from 'react'
-import { useColorScheme } from 'react-native'
 
 import { Loaders } from '@components/'
 
@@ -13,9 +12,7 @@ const AppProvider = ({ children }: any) => {
 
   const values = useMemo(
     () => ({
-      darkTheme,
       setLoading,
-      setRolesAndPermissions,
       setUser,
     }),
     [],
@@ -25,15 +22,15 @@ const AppProvider = ({ children }: any) => {
   }
 
   return (
-    <AppContext.Provider
-      value={{
-        ...values,
-        dark,
-        rolesAndPermissions,
-        user,
-      }}>
-      {children}
-    </AppContext.Provider>
+    <ThemeProvider>
+      <AppContext.Provider
+        value={{
+          ...values,
+          user,
+        }}>
+        {children}
+      </AppContext.Provider>
+    </ThemeProvider>
   )
 }
 
