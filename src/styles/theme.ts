@@ -209,7 +209,7 @@ const fontFamily = Platform.OS === 'ios' ? 'Arial' : 'Fontiso',
   },
   colors = {
     background: '#e09085a1',
-    primary: '#000',
+    primary: '#fff',
     secondary: '#334FFA',
   };
 

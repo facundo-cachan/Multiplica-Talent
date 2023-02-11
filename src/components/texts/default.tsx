@@ -1,7 +1,7 @@
 import { Text } from 'react-native'
 
-import { colors, fonts } from '@styles/theme'
-import { colorCommon, sizeCommon } from '../'
+import { fonts } from '@styles/theme'
+import { sizeCommon } from '../'
 
 import type { TextProps } from './'
 
@@ -16,13 +16,13 @@ const Default = ({
   <Text
     style={[
       fonts[size || sizeCommon][variant || 'normal'],
-      { color: colors[color || colorCommon]},
+      { color },
       style,
     ]}
     adjustsFontSizeToFit={true}
     {...props}>
     {text}
   </Text>
-);
+)
 
-export default Default;
+export default Default

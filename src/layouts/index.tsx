@@ -1,7 +1,7 @@
 import { useContext } from 'react'
 import { Platform, SafeAreaView, ScrollView, StatusBar } from 'react-native'
 
-import { AppContext } from '@providers/providerContext'
+import { ThemeContext } from '@providers/providerTheme'
 import { height, width } from '@utils/_dimensions'
 
 import { Loaders } from '@components/'
@@ -15,10 +15,9 @@ const StackProvider = ({
   loading?: boolean
   style?: React.CSSProperties
 }) => {
-  const { dark } = useContext(AppContext)
-
+  const { dark } = useContext(ThemeContext)  
   return (
-    <SafeAreaView edges={['top', 'left', 'right']}>
+    <SafeAreaView edges={['top', 'left', 'right']} style={style}>
       <StatusBar
         animated={true}
         barStyle={

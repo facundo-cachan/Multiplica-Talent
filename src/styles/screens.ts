@@ -48,7 +48,7 @@ const distance = 10,
       flex: 1,
       marginBottom: distance * 2,
       paddingBottom: distance * 2,
-    },
+    }
   })
 
 export default styles

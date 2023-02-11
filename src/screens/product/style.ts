@@ -1,8 +1,7 @@
 import { StyleSheet } from 'react-native'
 
-import screensStyle from '@styles/screens'
 import { colors, fonts, fontsSizes } from '@styles/theme'
-import { width, wp } from '@utils/_dimensions'
+import { hp, wp } from '@utils/_dimensions'
 
 const styles = StyleSheet.create({
   button: {
@@ -16,53 +15,54 @@ const styles = StyleSheet.create({
     style: {
       backgroundColor: colors.secondary,
       borderRadius: 10,
-      marginLeft: -20,
       alignItems: 'center',
       justifyContent: 'center',
-      width: wp(70),
+      marginTop: 30,
     }
   },
   card: {
     backgroundColor: colors.secondary,
     borderWidth: 0,
-    marginBottom: 20,
+    height: hp(15),
     marginTop: 20,
-    marginLeft: -20,
     padding: 20,
-    width: wp(70),
+    width: wp(75),
+    elevation: 20,
+    shadowColor: '#171717',
+    shadowOffset: { height: 4 },
+    shadowOpacity: 0.5,
+    shadowRadius: 3,
   },
   title: {
     ...fontsSizes.normal,
     ...fonts.normal.bold,
-    color: colors.background,
+    marginBottom: 10,
   },
   subTitle: {
     ...fontsSizes.normal,
-    ...fonts.huge.bold,
+    ...fonts.huggest.bold,
     color: colors.background,
   },
   text: {
-    backgroundColor: colors.background,
-    marginTop: 5,
-    width,
+    marginBottom: 5,
   },
   textGrey: {
     ...fontsSizes.normal,
     ...fonts.normal.bold,
+    marginTop: 20,
     color: '#9B9898',
-    marginTop: 5,
-  },
-  layout: {
-    margin: 20,
-    alignItems: 'center',
   },
   scrollView: {
-    ...screensStyle.scrollView,
-    borderWidth: 1,
-    borderColor: 'olive',
-    marginLeft: -30,
-    heigth: 10,
-    width: wp(70),
+    /* ...screensStyle.scrollView, */
+    borderWidth: 1, borderColor: 'olive',
+  },
+  preview: {
+    borderRadius: 10,
+    height: 55,
+    width: 55,
+  },
+  itemText: {
+    borderWidth: 1, borderColor: 'green',
   }
 })
 

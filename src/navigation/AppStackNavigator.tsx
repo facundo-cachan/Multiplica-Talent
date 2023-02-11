@@ -1,4 +1,4 @@
-import { faChevronLeft, faPowerOff } from '@fortawesome/free-solid-svg-icons'
+import { faChevronLeft, faMoon } from '@fortawesome/free-solid-svg-icons'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import { lazy } from 'react'
 
@@ -24,7 +24,7 @@ const screens: unknown = {
     headerRight: () => (
       <Icons.FontAwesome5
         onPress={() => navigation.navigate('SignOut')}
-        name={faPowerOff}
+        name={faMoon}
         color="primary"
       />
     ),
@@ -38,7 +38,7 @@ export default function AppStackNavigator({ routeByRole }: Navigation) {
       detachInactiveScreens={true}
       /* barStyle={{ paddingBottom: 48 }} */
       screenOptions={{
-        headerShown: true,
+        headerShown: false,
         unmountOnBlur: true,
         /* header: () => <Appbar />, */
       }}>

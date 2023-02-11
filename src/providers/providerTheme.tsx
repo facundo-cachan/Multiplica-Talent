@@ -12,7 +12,7 @@ const ThemeProvider = ({
   children?: JSX.Element | JSX.Element[]
 }): JSX.Element => {
   const scheme = useColorScheme()
-  const [dark, darkTheme] = useState(scheme === 'dark')
+  const [dark, darkTheme] = useState(scheme === 'light')
   const [theme, setTheme] = useState({ fonts, fontsSizes, colors }),
     values = useMemo(
       () => ({
@@ -24,7 +24,7 @@ const ThemeProvider = ({
     )
 
   useEffect(() => {
-    console.log(`🎨 Changing theme to ${dark ? 'dark' : 'light'}`)
+    console.log(`🎨 Theme ${dark ? 'dark' : 'light'}`)    
     setTheme({ colors, fonts, fontsSizes, ...(dark ? DarkTheme : LightTheme) })
   }, [dark])
 

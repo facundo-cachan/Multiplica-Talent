@@ -1,28 +1,31 @@
+import { color as dark } from './dark'
 import { colors } from './theme'
 
+const color = '#fff'
 const styles = {
   colors: {
-    background: colors.primary,
-    border: colors.background,
-    card: colors.background,
-    notification: colors.secondary,
+    background: color,
+    border: colors.secondary,
+    card: colors.secondary,
+    notification: colors.background,
     primary: colors.primary,
-    text: colors.background,
+    text: dark,
   },
   input: {
-    backgroundColor: colors.primary,
-    color: colors.primary,
+    backgroundColor: 'transparent',
+    color,
   },
   mainContainer: {
     backgroundColor: colors.primary,
-    color: colors.primary,
+    color,
   },
   scrollView: {
     backgroundColor: colors.primary,
   },
   text: {
-    color: colors.secondary,
+    color: dark,
   },
 }
 
+export { color }
 export default styles

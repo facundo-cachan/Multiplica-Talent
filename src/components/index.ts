@@ -6,14 +6,13 @@ import * as Cards from './cards'
 import * as Icons from './icons'
 import * as Texts from './texts'
 
-const sizeCommon = 'normal',
-  colorCommon = 'primary';
+const sizeCommon = 'normal';
 
-export { sizeCommon, colorCommon, Buttons, Cards, Icons, Texts }
+export { sizeCommon, Buttons, Cards, Icons, Texts }
 
 export type StyleProp = typeof ViewStyle &
   typeof TextStyle & {
     backgroundColor?: ThemeProps['color'] | undefined;
-    color?: ThemeProps['color'] | undefined;
+    /* color?: ThemeProps['color'] | undefined; */
     size?: ThemeProps['size'] | undefined;
   };

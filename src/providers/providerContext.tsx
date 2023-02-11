@@ -1,13 +1,10 @@
 import { createContext, useMemo, useState } from 'react'
-import { useColorScheme } from 'react-native'
 
 import { Loaders } from '@components/'
 import { ThemeProvider } from '@providers/providerTheme'
 
 const AppContext = createContext()
 const AppProvider = ({ children }: any) => {
-  const scheme = useColorScheme()
-  const [dark, darkTheme] = useState(scheme === 'dark')
   const [user, setUser] = useState(null)
   const [loading, setLoading] = useState(false)
 
@@ -15,7 +12,6 @@ const AppProvider = ({ children }: any) => {
     () => ({
       setLoading,
       setUser,
-      darkTheme
     }),
     [],
   )
@@ -29,7 +25,6 @@ const AppProvider = ({ children }: any) => {
         value={{
           ...values,
           user,
-          dark
         }}>
         {children}
       </AppContext.Provider>
