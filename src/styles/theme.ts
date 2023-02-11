@@ -1,6 +1,8 @@
+import { Platform } from 'react-native'
+
 import { wp } from '@utils/_dimensions'
 
-const fontFamily = 'Avenir',
+const fontFamily = Platform.OS === 'ios' ? 'Arial' : 'Fontiso',
   fontsSizes = {
     big: {
       fontSize: wp(5),
@@ -206,9 +208,9 @@ const fontFamily = 'Avenir',
     },
   },
   colors = {
-    background: '#fff',
+    background: '#e09085a1',
     primary: '#000',
-    secondary: '##334FFA',
+    secondary: '#334FFA',
   };
 
 export type ThemeProps = {

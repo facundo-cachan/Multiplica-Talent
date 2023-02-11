@@ -1,13 +1,14 @@
 import { createContext, useMemo, useState } from 'react'
 
 import { Loaders } from '@components/'
-import { ThemeProvider } from '@providers/providerTheme'
 
 const AppContext = createContext()
 const AppProvider = ({ children }: any) => {
-
+  const scheme = useColorScheme()
+  const [dark, darkTheme] = useState(scheme === 'dark')
   const [user, setUser] = useState(null)
-  const [loading, setLoading] = useState(false)
+  const [rolesAndPermissions, setRolesAndPermissions] = useState()
+  const [loading, setLoading] = useState(false);
 
   const values = useMemo(
     () => ({

@@ -31,9 +31,6 @@ const distance = 10,
       flex: 1,
       height: '100%',
     },
-    map: {
-      ...StyleSheet.absoluteFillObject,
-    },
     marginVertical: {
       marginBottom: distance,
       marginTop: distance,
@@ -51,9 +48,6 @@ const distance = 10,
       flex: 1,
       marginBottom: distance * 2,
       paddingBottom: distance * 2,
-    },
-    text: {
-      color: colors.primary,
     },
   })
 

@@ -7,7 +7,7 @@ import styles from '@styles/screens'
 
 import type { ButtonProps } from '.'
 
-type Props = ButtonProps;
+type Props = ButtonProps
 
 const Simple = ({
   color,
@@ -23,10 +23,7 @@ const Simple = ({
   size,
   variant,
   onPress,
-}: Props): JSX.Element => {
-  console.log(contentStyle);
-  
-  return (
+}: Props): JSX.Element => (
   <TouchableOpacity
     onPress={onPress}
     disabled={Boolean(disabled)}
@@ -45,18 +42,17 @@ const Simple = ({
       <Icons.FontAwesome5
         loading={loading}
         color={color}
-        style={{marginRight: 10}}
+        style={{ marginRight: 10 }}
         {...iconLeft}
       />
     )}
     <Text
       style={[
-        {...fonts[size || sizeCommon][variant || 'normal']},
+        { ...fonts[size || sizeCommon][variant || 'normal'] },
         {
           backgroundColor: 'transparent',
           color: colors[color || colorCommon],
           fontSize: fontsSizes[size || sizeCommon].fontSize,
-          width: '90%',
           ...contentStyle,
         },
       ]}>
@@ -64,6 +60,6 @@ const Simple = ({
       {iconRight && <Icons.FontAwesome5 color={color} {...iconRight} />}
     </Text>
   </TouchableOpacity>
-);}
+)
 
-export default Simple;
+export default Simple

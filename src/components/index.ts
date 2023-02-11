@@ -1,14 +1,15 @@
-import type {TextStyle, ViewStyle} from 'react-native';
-import type {ThemeProps} from '../styles/theme';
+import type { TextStyle, ViewStyle } from 'react-native'
+import type { ThemeProps } from '../styles/theme'
 
-import * as Buttons from './buttons';
-import * as Icons from './icons';
-import * as Texts from './texts';
+import * as Buttons from './buttons'
+import * as Cards from './cards'
+import * as Icons from './icons'
+import * as Texts from './texts'
 
 const sizeCommon = 'normal',
   colorCommon = 'primary';
 
-export {sizeCommon, colorCommon, Buttons, Icons, Texts};
+export { sizeCommon, colorCommon, Buttons, Cards, Icons, Texts }
 
 export type StyleProp = typeof ViewStyle &
   typeof TextStyle & {

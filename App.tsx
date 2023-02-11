@@ -14,7 +14,6 @@ import AppNavigation from '@navigation/'
 import { AppProvider } from '@providers/providerContext'
 
 const App = () => (
-    <AppProvider>
       <AppNavigation />
       {/* @ts-ignore */}
       <FlashMessage
