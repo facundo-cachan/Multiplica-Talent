@@ -1,15 +1,14 @@
-import { color as dark } from './dark'
 import { colors } from './theme'
 
 const color = '#fff'
 const styles = {
   colors: {
-    background: color,
+    background: '#F8F8F8',
     border: colors.secondary,
     card: colors.secondary,
     notification: colors.background,
     primary: colors.primary,
-    text: dark,
+    text: '#000',
   },
   input: {
     backgroundColor: 'transparent',
@@ -23,7 +22,7 @@ const styles = {
     backgroundColor: colors.primary,
   },
   text: {
-    color: dark,
+    color: '#000',
   },
 }
 

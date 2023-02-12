@@ -1,12 +1,12 @@
 import { useContext } from 'react'
-import { Platform, SafeAreaView, ScrollView, StatusBar } from 'react-native'
+import { Platform, SafeAreaView, StatusBar, View } from 'react-native'
 
 import { ThemeContext } from '@providers/providerTheme'
-import { height, width } from '@utils/_dimensions'
+import { height } from '@utils/_dimensions'
 
 import { Loaders } from '@components/'
 
-const StackProvider = ({
+const Default = ({
   children,
   loading,
   style,
@@ -33,20 +33,19 @@ const StackProvider = ({
       {loading ? (
         <Loaders.Default />
       ) : (
-        <ScrollView
+        <View
           testID="Layout"
-          contentContainerStyle={[
+            style={[
             {
               minHeight: height,
-              minWidth: width,
             },
             style,
           ]}>
           {children}
-        </ScrollView>
+        </View>
       )}
     </SafeAreaView>
   )
 }
 
-export default StackProvider
+export default Default

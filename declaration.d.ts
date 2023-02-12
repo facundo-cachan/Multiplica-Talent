@@ -13,6 +13,6 @@ declare module '@service/*';
 declare module '@styles/*';
 declare module '@providers/*';
 declare module '@components/';
-declare module '@layouts/';
+declare module '@layouts/*';
 declare module '@components/*';
 declare module '@interfaces';

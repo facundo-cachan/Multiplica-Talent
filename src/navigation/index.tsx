@@ -14,7 +14,7 @@ import type { IconProps } from '../components/icons'
 
 export type Route = {
   name: 'Product' // should be keyof RootStackParamList
-  icon: IconProps['name']
+  icon: IconProps['icon']
 }
 const routes: Route[] = [
   {
@@ -33,7 +33,6 @@ const AppNavigation = () => {
   })
 
   useEffect(() => {
-    console.log(`🎨 Changing theme to ${dark ? 'dark' : 'light'}`)
     setTheme({ colors, fonts, fontsSizes, ...(dark ? DarkTheme : LightTheme) })
   }, [dark])
 

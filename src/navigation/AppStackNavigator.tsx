@@ -17,14 +17,14 @@ const screens: unknown = {
     headerLeft: () => (
       <Icons.FontAwesome5
         onPress={() => navigation.goBack()}
-        name={faChevronLeft}
+        icon={faChevronLeft}
         color="primary"
       />
     ),
     headerRight: () => (
       <Icons.FontAwesome5
         onPress={() => navigation.navigate('SignOut')}
-        name={faMoon}
+        icon={faMoon}
         color="primary"
       />
     ),

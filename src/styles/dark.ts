@@ -1,4 +1,3 @@
-import { color as light } from './light'
 import { colors } from './theme'
 
 const color = '#000'
@@ -9,7 +8,7 @@ const styles = {
     card: colors.secondary,
     notification: colors.background,
     primary: colors.primary,
-    text: light,
+    text: '#fff',
   },
   input: {
     backgroundColor: 'transparent',
@@ -23,7 +22,7 @@ const styles = {
     backgroundColor: colors.primary,
   },
   text: {
-    color: light,
+    color: '#fff',
   },
 }
 

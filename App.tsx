@@ -12,8 +12,11 @@ import FlashMessage from 'react-native-flash-message'
 
 import AppNavigation from '@navigation/'
 import { AppProvider } from '@providers/providerContext'
+import { deleteData } from '@utils/_storage'
 
-const App = () => (
+const App = () => {
+  deleteData('products')
+  return (
   <AppProvider>
     <AppNavigation />
     {/* @ts-ignore */}
@@ -29,6 +32,6 @@ const App = () => (
       floating
     />
   </AppProvider>
-)
+)}
 
 export default App

@@ -2,7 +2,7 @@ import { ParamListBase, StackNavigationState } from '@react-navigation/native'
 
 import type { Route } from '../navigation'
 
-type Params = { itemId: number; otherParam?: unknown }
+type Params = { itemId: number | string; otherParam?: unknown }
 
 export type RootStackParamList = ParamListBase & {
   Product: undefined

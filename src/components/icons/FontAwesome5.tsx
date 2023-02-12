@@ -1,14 +1,14 @@
-import {faSpinner} from '@fortawesome/free-solid-svg-icons';
-import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
-import {TouchableOpacity} from 'react-native';
+import { faSpinner } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
+import { TouchableOpacity } from 'react-native'
 
-import {colorCommon, sizeCommon} from '@components/';
-import {colors, fontsSizes} from '@styles/theme';
+import { colorCommon, sizeCommon } from '@components/'
+import { colors, fontsSizes } from '@styles/theme'
 
-import type {IconProps} from '.';
+import type { IconProps } from '.'
 
 const FontAwesome5 = ({
-  name,
+  icon,
   size,
   color,
   style,
@@ -28,7 +28,7 @@ const FontAwesome5 = ({
       style,
     ]}>
     <FontAwesomeIcon
-      icon={loading ? faSpinner : name}
+      icon={loading ? faSpinner : icon}
       size={fontsSizes[size || sizeCommon].fontSize}
       color={colors[color || colorCommon]}
     />

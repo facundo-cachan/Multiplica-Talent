@@ -7,6 +7,10 @@ const screensProduct = [
     name: 'ProductHome',
     screen: require('../screens/product/index').default,
   },
+  {
+    name: 'ProductDetails',
+    screen: require('../screens/product/details').default,
+  },
 ]
 
 const Stack = createNativeStackNavigator()
@@ -14,7 +18,7 @@ const Stack = createNativeStackNavigator()
 const ProductStack = () => (
   <Stack.Navigator initialRouteName="ProductHome">
     {screensProduct.map(({ name, screen, title }: Screen, index: number) => {
-      const options = title ? { title } : { headerShown: false }
+      const options = title ? { title } : { headerShown: Boolean(name === 'ProductDetails'), headerBackVisible: false, }
       return (
         <Stack.Screen
           key={index}

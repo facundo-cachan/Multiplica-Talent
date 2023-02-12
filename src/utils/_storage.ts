@@ -26,7 +26,7 @@ const setData = async (name: string, data: any) => {
     if (currentState) {
       temp = [...currentState, data]
     } else {
-      temp = [data]
+      temp = Array.isArray(data) ? data : [data]
     }
     await AsyncStorage.setItem(name, JSON.stringify(temp))
     console.log('📦 Data saved in storage')
