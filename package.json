@@ -36,7 +36,7 @@
     "start": "yarn clean:cache && react-native start --reset-cache --verbose",
     "tsc:watch": "tsc --project tsconfig.json",
     "lint": "eslint --ext .tsx,.ts --fix",
-    "test": "jest",
+    "test": "jest --detectOpenHandles",
     "test:coverage": "jest --coverage",
     "test:watch": "jest --watchAll",
     "prettier": "prettier --write '**/*.{ts,tsx,js,json,md,yml,yaml,css,scss,html}'",

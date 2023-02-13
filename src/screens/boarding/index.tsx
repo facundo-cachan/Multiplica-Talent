@@ -38,10 +38,12 @@ const Done = ({ ...props }) => (
 )
 const OnboardingScreen = ({ navigation }: BoardingScreenProps) => {
   useLayoutEffect(() => {
-    const skip = getData('skip-intro')
-    if (skip) {
-      navigation.navigate('Product')
-    }
+    (async () => {
+      const skip = await getData('skip-intro')
+      if (skip === true) {
+        navigation.navigate('Product')
+      }
+    })()
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
   return (

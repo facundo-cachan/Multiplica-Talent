@@ -7,7 +7,6 @@ const AppContext = createContext()
 const AppProvider = ({ children }: any) => {
   const [user, setUser] = useState(null)
   const [loading, setLoading] = useState(false)
-
   const values = useMemo(
     () => ({
       setLoading,

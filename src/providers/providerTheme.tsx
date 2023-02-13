@@ -19,8 +19,7 @@ const ThemeProvider = ({
         theme,
         darkTheme,
       }),
-      // eslint-disable-next-line react-hooks/exhaustive-deps
-      [dark],
+      [theme],
     )
 
   useEffect(() => {
@@ -33,7 +32,6 @@ const ThemeProvider = ({
       value={{
         ...values,
         dark,
-        theme,
       }}>
       {children}
     </ThemeContext.Provider>

@@ -2,14 +2,13 @@ import { faChevronLeft, faMoon } from '@fortawesome/free-solid-svg-icons'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import { lazy } from 'react'
 
-import OnboardingScreen from '@screens/boarding/'
+import OnboardingScreen from '@screens/boarding'
 
 import { Icons } from '@components'
-// import Appbar from '@components/appBar';
 
 import type { Navigation } from './types'
 
-const screens: unknown = {
+const screens: any = {
   Product: lazy(() => import('./ProductStack')),
 },
   Stack = createNativeStackNavigator(),
@@ -36,11 +35,9 @@ export default function AppStackNavigator({ routeByRole }: Navigation) {
     <Stack.Navigator
       initialRouteName="Onboarding"
       detachInactiveScreens={true}
-      /* barStyle={{ paddingBottom: 48 }} */
       screenOptions={{
         headerShown: false,
         unmountOnBlur: true,
-        /* header: () => <Appbar />, */
       }}>
       <Stack.Screen
         name="Onboarding"
@@ -53,7 +50,6 @@ export default function AppStackNavigator({ routeByRole }: Navigation) {
             key={index}
             name={name}
             options={headerScreen}
-            // @ts-ignore
             component={screens[name]}
           />
         ))}

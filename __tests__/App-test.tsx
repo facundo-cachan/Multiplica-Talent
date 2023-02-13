@@ -1,14 +1,30 @@
-/**
- * @format
- */
+import { describe, expect, test } from '@jest/globals'
+import { fireEvent, render, screen } from '@testing-library/react-native'
 
-import 'react-native';
-import React from 'react';
-import App from '../App';
+import App from '../App'
 
-// Note: test renderer must be required after react-native.
-import renderer from 'react-test-renderer';
+describe('Testing react navigation', () => {
+  test('screen show welcome text', async () => {
+    render(<App />)
+    const conect = await screen.findByText('Conecta con el mundo')
+    expect(conect).toBeOnTheScreen()
+  })
+  /* test('screen show welcome text', async () => {
+    const component = (
+      <NavigationContainer>
+        <AppStackNavigator routeByRole={[]} />
+      </NavigationContainer>
+    )
+    render(component)
+    const conect = await screen.findByText('Conecta con el mundo')
+    expect(conect).toBeOnTheScreen()
+  }) */
 
-it('renders correctly', () => {
-  renderer.create(<App />);
-});
+  test('screen show welcome text', async () => {
+    render(<App />);
+    const skiped = await screen.findByText('Skip')
+    fireEvent(skiped, 'press')
+    const welcome = await screen.findByText('Bienvenido')
+    expect(welcome).toBeOnTheScreen()
+  })
+})

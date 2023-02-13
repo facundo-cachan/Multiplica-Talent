@@ -73,7 +73,6 @@ const shadow = {
       padding: 20,
     },
     list: {
-      backgroundColor: '#fff',
       borderRadius: 10,
       height: 'auto',
     },

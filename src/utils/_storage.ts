@@ -14,7 +14,7 @@ const getData = async (name: string) => {
       return JSON.parse(value)
     }
   } catch (e) {
-    console.log('📤 getData', e)
+    // console.log('📤 getData', e)
   }
   return null
 }
@@ -29,10 +29,10 @@ const setData = async (name: string, data: any) => {
       temp = Array.isArray(data) ? data : [data]
     }
     await AsyncStorage.setItem(name, JSON.stringify(temp))
-    console.log('📦 Data saved in storage')
+    // console.log('📦 Data saved in storage')
     return true
   } catch (e) {
-    console.log('📥 setData', e)
+    // console.log('📥 setData', e)
     return false
   }
 }

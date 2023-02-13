@@ -1,6 +1,6 @@
 import { Text, TouchableOpacity } from 'react-native'
 
-import { Icons, colorCommon, sizeCommon } from '@components'
+import { Icons, sizeCommon } from '@components'
 import { colors, fonts, fontsSizes } from '@styles/theme'
 
 import styles from '@styles/screens'
@@ -51,7 +51,7 @@ const Simple = ({
         { ...fonts[size || sizeCommon][variant || 'normal'] },
         {
           backgroundColor: 'transparent',
-          color: colors[color || colorCommon],
+          color: colors[color || '#000'],
           fontSize: fontsSizes[size || sizeCommon].fontSize,
           ...contentStyle,
         },

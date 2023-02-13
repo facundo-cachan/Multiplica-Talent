@@ -1,7 +1,7 @@
-import {describe, expect, test} from '@jest/globals';
-import {fireEvent, render, screen} from '@testing-library/react-native';
+import { describe, expect, test } from '@jest/globals'
+import { fireEvent, render, screen } from '@testing-library/react-native'
 
-import {Buttons} from '@components';
+import { Buttons } from '@components'
 
 // @ts-ignore
 const onPressMock = jest.fn();
@@ -22,7 +22,7 @@ describe('Testing Buttons', () => {
         loading={true}
         color="primary"
         contentStyle={{
-          backgroundColor: 'blue600',
+          backgroundColor: '#c44c',
           color: 'primary',
           textAlign: 'center',
         }}

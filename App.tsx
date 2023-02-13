@@ -15,7 +15,8 @@ import { AppProvider } from '@providers/providerContext'
 import { deleteData } from '@utils/_storage'
 
 const App = () => {
-  deleteData('products')
+  deleteData('products');
+  deleteData('skip-intro');
   return (
   <AppProvider>
     <AppNavigation />

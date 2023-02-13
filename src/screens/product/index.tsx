@@ -29,7 +29,7 @@ const hardProducts: Product[] = [{ createdAt: "2022-12-09T06:34:25.607Z", id: "1
 const ProductsScreen = ({
   navigation,
 }: ProductScreenProps): JSX.Element => {
-  const { theme: { colors } } = useContext(ThemeContext)
+  const { dark, theme: { colors } } = useContext(ThemeContext)
   const { setUser, user } = useContext(AppContext)
   const [welcome, setWelcome] = useState('Bienvenido')
   const [total, setTotal] = useState(0)
@@ -38,7 +38,7 @@ const ProductsScreen = ({
   useLayoutEffect(() => {
     (async () => {
       setTimeout(() => {
-        setProducts(hardProducts);
+        setProducts(hardProducts)
         setData('products', hardProducts)
       }, 2000)
       /* 
@@ -73,7 +73,7 @@ const ProductsScreen = ({
             acc = acc + points
           }
           return acc
-        }, 0);        
+        }, 0)
         setTotal(sum)
       }
     })()
@@ -163,7 +163,7 @@ const ProductsScreen = ({
       <View style={styles.list}>
         <FlatList
           initialNumToRender={4}
-          style={styles.scrollView}
+          style={[styles.scrollView, { backgroundColor: dark ? '#939090' : '#fff' }]}
           data={products ?? []}
           keyExtractor={({ id }: Product) => id}
           renderItem={(product: Product) => <Item {...product} />}

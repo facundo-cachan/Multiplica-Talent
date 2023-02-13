@@ -14,3 +14,24 @@
 ## Run instructions for macOS:
 
 • See https://aka.ms/ReactNativeGuideMacOS for the latest up-to-date instructions.
+
+# Criteria of acceptance
+- [x] Connection to endpoint
+- [x] Navigation between screens
+- [x] Unit tests
+
+
+## The following items are desirable:
+- [] Filter
+- [] Keep all elements "pixel perfect"
+- [] Component or integration unit testsComponent or integration unit tests
+
+## Previews Snapshots
+
+<div style="flex-direction: row">
+  <img src="./assets/img/Onboarding.png" width="200">
+  <img src="./assets/img/Products.png" width="200">
+  <img src="./assets/img/ProductDetail.png" width="200">
+</div>
+
+<h5>End of project 12 Feb 2023.</h5>
