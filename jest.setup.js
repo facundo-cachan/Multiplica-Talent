@@ -1,35 +1,17 @@
-// import nock from 'nock';
 import mockAsyncStorage from '@react-native-async-storage/async-storage/jest/async-storage-mock';
 import '@testing-library/jest-native/extend-expect';
-
-// nock.disableNetConnect();
+import 'react-native-gesture-handler/jestSetup';
 
 jest.mock('react-native/Libraries/Animated/NativeAnimatedHelper');
 jest.mock('react-native-vector-icons/FontAwesome5', () => {
   return {TabBarItemIOS: '', ToolbarAndroid: ''};
 });
-// jest.mock('react-native-paper', () => {});
-/* 
-jest.mock('react-i18next', () => ({
-  useTranslation: () => ({ t: (key) => key }),
-}));
-jest.mock('react-native-bootsplash', () => {
-  return {
-    show: jest.fn().mockResolvedValueOnce(),
-    hide: jest.fn().mockResolvedValueOnce(),
-    getVisibilityStatus: jest.fn().mockResolvedValue('hidden'),
-  };
-});
- */
 jest.mock('@react-native-async-storage/async-storage', () => mockAsyncStorage);
-/* 
-jest.mock('redux-persist', () => {
-  const real = jest.requireActual('redux-persist');
-  return {
-    ...real,
-    persistReducer: jest.fn().mockImplementation((config, reducers) => reducers),
-  };
+jest.mock('react-native-reanimated', () => {
+  const Reanimated = require('react-native-reanimated/mock');
+  // The mock for `call` immediately calls the callback which is incorrect
+  // So we override it with a no-op
+  Reanimated.default.call = () => { };
+  return Reanimated;
 });
- */
-
 export * from '@testing-library/jest-native/extend-expect';

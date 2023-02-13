@@ -18,7 +18,6 @@ const FontAwesome5 = ({
 }: IconProps) => (
   <TouchableOpacity
     onPress={onPress}
-    ß
     disabled={disabled}
     style={[
       {
