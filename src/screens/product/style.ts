@@ -2,14 +2,20 @@ import { StyleSheet } from 'react-native'
 
 import { colors, fonts, fontsSizes } from '@styles/theme'
 import { hp, wp } from '@utils/_dimensions'
-
-const shadow = {
-  elevation: 20,
-  shadowColor: '#171717',
-  shadowOffset: { height: 4 },
-  shadowOpacity: 0.5,
-  shadowRadius: 3,
+const btnStyle = {
+  backgroundColor: colors.secondary,
+  borderRadius: 10,
+  alignSelf: 'center',
+  justifyContent: 'center',
+  marginTop: 30,
 },
+  shadow = {
+    elevation: 20,
+    shadowColor: '#171717',
+    shadowOffset: { height: 4 },
+    shadowOpacity: 0.5,
+    shadowRadius: 3,
+  },
   styles = StyleSheet.create({
     button: {
       contentStyle: {
@@ -20,13 +26,13 @@ const shadow = {
         padding: 14,
       },
       style: {
-        backgroundColor: colors.secondary,
-        borderRadius: 10,
-        alignSelf: 'center',
-        justifyContent: 'center',
-        marginTop: 30,
+        ...btnStyle,
         width: wp(90),
-      }
+      },
+      middle: {
+        ...btnStyle,
+        width: wp(42),
+      },
     },
     card: {
       backgroundColor: colors.secondary,
@@ -80,18 +86,22 @@ const shadow = {
       ...shadow,
       alignSelf: 'center',
       borderRadius: 10,
-      height: hp(35),
+      height: hp(45),
       marginTop: 15,
       marginBottom: 25,
       width: wp(90),
     },
     image: {
-      height: hp(35),
+      height: hp(45),
       width: wp(90),
     },
     box: {
       marginLeft: wp(5),
-    }
+    },
+    points: {
+      ...fonts.big.bold,
+      marginTop: 20
+    },
   })
 
 export default styles

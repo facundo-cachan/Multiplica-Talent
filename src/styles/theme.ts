@@ -214,7 +214,7 @@ const fontFamily = Platform.OS === 'ios' ? 'Arial' : 'Fontiso',
   };
 
 export type ThemeProps = {
-  color?: 'primary' | 'secondary' | 'background';
+  color?: string;
   size?:
     | 'huggest'
     | 'huge'
