@@ -2,6 +2,7 @@ import mockAsyncStorage from '@react-native-async-storage/async-storage/jest/asy
 import '@testing-library/jest-native/extend-expect';
 import 'react-native-gesture-handler/jestSetup';
 
+jest.mock('react-native-flash-message');
 jest.mock('react-native/Libraries/Animated/NativeAnimatedHelper');
 jest.mock('react-native-vector-icons/FontAwesome5', () => {
   return {TabBarItemIOS: '', ToolbarAndroid: ''};
@@ -14,4 +15,5 @@ jest.mock('react-native-reanimated', () => {
   Reanimated.default.call = () => { };
   return Reanimated;
 });
+
 export * from '@testing-library/jest-native/extend-expect';

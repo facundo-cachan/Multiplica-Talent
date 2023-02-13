@@ -22,7 +22,7 @@
 
 
 ## The following items are desirable:
-- [] Filter
+- [x] Filter
 - [] Keep all elements "pixel perfect"
 - [x] Component or integration unit testsComponent or integration unit tests
 
@@ -34,4 +34,5 @@
   <img src="./assets/img/ProductDetail.png" width="200">
 </div>
 
-<h5>End of project 12 Feb 2023.</h5>
+<h5>Star 10 Feb 2023.</h5>
+<h5>End  13 Feb 2023.</h5>

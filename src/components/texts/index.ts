@@ -1,9 +1,9 @@
-import {StyleProp} from '../';
-import type {ThemeProps} from '../../styles/theme';
+import { StyleProp } from '../'
+import type { ThemeProps } from '../../styles/theme'
 
-import Default from './default';
+import Default from './default'
 
-export {Default};
+export { Default }
 
 export type TextProps = ThemeProps & {
   accessibilityState?: boolean;
@@ -13,6 +13,5 @@ export type TextProps = ThemeProps & {
   ellipsizeMode?: 'head' | 'middle' | 'tail' | 'clip';
   style?: StyleProp;
   text: string;
-  size?: ThemeProps['size'];
   variant?: ThemeProps['variant'];
 };
