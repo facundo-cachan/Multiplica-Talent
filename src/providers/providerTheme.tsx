@@ -23,7 +23,7 @@ const ThemeProvider = ({
     )
 
   useEffect(() => {
-    console.log(`🎨 Theme ${dark ? 'dark' : 'light'}`)    
+    // console.log(`🎨 Theme ${dark ? 'dark' : 'light'}`)    
     setTheme({ colors, fonts, fontsSizes, ...(dark ? DarkTheme : LightTheme) })
   }, [dark])
 

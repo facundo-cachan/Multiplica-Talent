@@ -24,7 +24,7 @@
 ## The following items are desirable:
 - [] Filter
 - [] Keep all elements "pixel perfect"
-- [] Component or integration unit testsComponent or integration unit tests
+- [x] Component or integration unit testsComponent or integration unit tests
 
 ## Previews Snapshots
 
