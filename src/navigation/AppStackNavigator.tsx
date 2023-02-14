@@ -1,58 +1,22 @@
-import { faChevronLeft, faMoon } from '@fortawesome/free-solid-svg-icons'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
-import { lazy } from 'react'
 
-import OnboardingScreen from '@screens/boarding'
+import Product from './ProductStack'
 
-import { Icons } from '@components'
+const Stack = createNativeStackNavigator();
 
-import type { Navigation } from './types'
-
-const screens: any = {
-  Product: lazy(() => import('./ProductStack')),
-},
-  Stack = createNativeStackNavigator(),
-  headerScreen = ({ navigation }: any) => ({
-    headerLeft: () => (
-      <Icons.FontAwesome5
-        onPress={() => navigation.goBack()}
-        icon={faChevronLeft}
-        color="primary"
-      />
-    ),
-    headerRight: () => (
-      <Icons.FontAwesome5
-        onPress={() => navigation.navigate('SignOut')}
-        icon={faMoon}
-        color="primary"
-      />
-    ),
-    headerTitle: () => <></>,
-  })
-
-export default function AppStackNavigator({ routeByRole }: Navigation) {
+export default function AppStackNavigator() {
   return (
     <Stack.Navigator
-      initialRouteName="Onboarding"
+      initialRouteName="Product"
       detachInactiveScreens={true}
       screenOptions={{
         headerShown: false,
         unmountOnBlur: true,
       }}>
       <Stack.Screen
-        name="Onboarding"
-        component={OnboardingScreen}
-        options={{ headerShown: false }}
+        name="Product"
+        component={Product}
       />
-      {routeByRole.length > 0 &&
-        routeByRole.map(({ name }, index) => (
-          <Stack.Screen
-            key={index}
-            name={name}
-            options={headerScreen}
-            component={screens[name]}
-          />
-        ))}
     </Stack.Navigator>
   )
 }
