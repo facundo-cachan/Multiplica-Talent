@@ -80,6 +80,7 @@ const ProductsScreen = ({
       />
       <View style={screensStyles.columns}>
         <Texts.Default
+          color={colors.text}
           text={item.product}
           variant="bold"
           size="small"
@@ -89,7 +90,8 @@ const ProductsScreen = ({
           text={_formatTime(item.createdAt)}
           variant="bold"
           size="small"
-          style={{ marginLeft: 20, }}
+          color={colors.text}
+          style={{ marginLeft: 20 }}
         />
       </View>
       <View style={screensStyles.row}>
@@ -101,6 +103,7 @@ const ProductsScreen = ({
           style={{ marginRight: 1, }}
         />
         <Texts.Default
+          color={colors.text}
           text={item.points}
           variant="bold"
           size="small"
@@ -123,7 +126,7 @@ const ProductsScreen = ({
   }
 
   return (
-    <Layout loading={Boolean(products && products.length < 0)} style={{ ...styles.layout, backgroundColor: colors.background, }}>
+    <Layout loading={Boolean(products && products.length < 0)} style={{ ...styles.layout, backgroundColor: colors.background }}>
       <Texts.Default
         text={welcome}
         variant="bold"
@@ -172,9 +175,6 @@ const ProductsScreen = ({
           keyExtractor={({ id }: Product) => id}
           renderItem={(product: Product) => <Item {...product} />}
           onEndReachedThreshold={0.01}
-          onEndReached={(info: any) => {
-            console.log(info)
-          }}
         />
       </View>
       {filter === 'all' ? (<Buttons.Simple
@@ -188,7 +188,7 @@ const ProductsScreen = ({
         <Buttons.Simple
           title="Ganados"
           variant="bold"
-          size="big"
+          size="normal"
           contentStyle={{ ...styles.button.contentStyle, color: colors.primary }}
           style={styles.button.middle}
           onPress={won}
@@ -196,7 +196,7 @@ const ProductsScreen = ({
         <Buttons.Simple
           title="Canjeados"
           variant="bold"
-          size="big"
+          size="normal"
           contentStyle={{ ...styles.button.contentStyle, color: colors.primary }}
           style={styles.button.middle}
           onPress={exchanged}

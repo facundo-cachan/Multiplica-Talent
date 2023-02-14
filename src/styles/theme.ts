@@ -211,26 +211,26 @@ const fontFamily = Platform.OS === 'ios' ? 'Arial' : 'Fontiso',
     background: '#e09085a1',
     primary: '#fff',
     secondary: '#334FFA',
-  };
+  }
 
 export type ThemeProps = {
-  color?: string;
+  color?: string
   size?:
-    | 'huggest'
-    | 'huge'
-    | 'biggest'
-    | 'bigger'
-    | 'big'
-    | 'normal'
-    | 'small'
-    | 'smallest';
-  variant?: 'normal' | 'regular' | 'bold' | 'semiBold';
-};
+  | 'huggest'
+  | 'huge'
+  | 'biggest'
+  | 'bigger'
+  | 'big'
+  | 'normal'
+  | 'small'
+  | 'smallest'
+  variant?: 'normal' | 'regular' | 'bold' | 'semiBold'
+}
 export declare type Theme = {
-  fontsSizes?: ThemeProps['size'];
-  fonts: ThemeProps['size'];
-  colors: ThemeProps['color'];
-};
+  fontsSizes?: ThemeProps['size']
+  fonts: ThemeProps['size']
+  colors: ThemeProps['color']
+}
 
 export { fonts, fontsSizes, colors }
 

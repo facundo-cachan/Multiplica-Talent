@@ -16,7 +16,7 @@ import { deleteData } from '@utils/_storage'
 
 const App = () => {
   deleteData('products');
-  deleteData('skip-intro');
+  // deleteData('skip-intro');
   return (
   <AppProvider>
     <AppNavigation />

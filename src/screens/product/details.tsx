@@ -47,19 +47,23 @@ const ProductDetailsScreen = ({
       </View>
       <View style={styles.box}>
         <Texts.Default
+          color={colors.text}
           text="Detalles del producto"
           style={styles.textGrey}
         />
         <Texts.Default
+          color={colors.text}
           text={`Comprado el ${product?.createdAt != undefined && _formatTime(product?.createdAt.toString())}`}
           variant="bold"
           style={{ marginTop: 20 }}
         />
         <Texts.Default
+          color={colors.text}
           text="Con esta compra acumulaste"
           style={styles.textGrey}
         />
         <Texts.Default
+          color={colors.text}
           text={`${product?.points} puntos`}
           variant="bold"
           style={styles.points}
