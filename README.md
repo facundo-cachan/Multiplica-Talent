@@ -23,13 +23,12 @@
 
 ## The following items are desirable:
 - [x] Filter
-- [] Keep all elements "pixel perfect"
+- [x] Keep all elements "pixel perfect"
 - [x] Component or integration unit testsComponent or integration unit tests
 
 ## Previews Snapshots
 
 <div style="flex-direction: row">
-  <img src="./assets/img/Onboarding.png" width="200">
   <img src="./assets/img/Products.png" width="200">
   <img src="./assets/img/ProductDetail.png" width="200">
 </div>
