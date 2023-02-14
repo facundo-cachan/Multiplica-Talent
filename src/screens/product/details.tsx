@@ -7,11 +7,11 @@
 import { getData } from '@utils/_storage'
 import { useContext, useLayoutEffect, useState } from 'react'
 import { Image, View } from 'react-native'
-// import fetcher from '@utils/_fetcherFake'
 
 import { Buttons, Texts } from '@components'
 import Layout from '@layouts/default'
 import { ThemeContext } from '@providers/providerTheme'
+import _formatTime from '@utils/_formatTime'
 import styles from './style'
 
 import type { ProductScreenProps } from '../types'
@@ -47,20 +47,26 @@ const ProductDetailsScreen = ({
       </View>
       <View style={styles.box}>
         <Texts.Default
+          color={colors.text}
           text="Detalles del producto"
           style={styles.textGrey}
         />
         <Texts.Default
-          text={`Comprado el ${product?.createdAt}`}
+          color={colors.text}
+          text={`Comprado el ${product?.createdAt != undefined && _formatTime(product?.createdAt.toString())}`}
+          variant="bold"
           style={{ marginTop: 20 }}
         />
         <Texts.Default
+          color={colors.text}
           text="Con esta compra acumulaste"
           style={styles.textGrey}
         />
         <Texts.Default
+          color={colors.text}
           text={`${product?.points} puntos`}
-          style={{ marginTop: 20 }}
+          variant="bold"
+          style={styles.points}
         />
       </View>
       <Buttons.Simple

@@ -2,14 +2,21 @@ import { StyleSheet } from 'react-native'
 
 import { colors, fonts, fontsSizes } from '@styles/theme'
 import { hp, wp } from '@utils/_dimensions'
-
-const shadow = {
-  elevation: 20,
-  shadowColor: '#171717',
-  shadowOffset: { height: 4 },
-  shadowOpacity: 0.5,
-  shadowRadius: 3,
+import { Platform } from 'react-native'
+const btnStyle = {
+  backgroundColor: colors.secondary,
+  borderRadius: 10,
+  alignSelf: 'center',
+  justifyContent: 'center',
+  marginTop: 30,
 },
+  shadow = {
+    elevation: 20,
+    shadowColor: '#171717',
+    shadowOffset: { height: 4 },
+    shadowOpacity: 0.5,
+    shadowRadius: 3,
+  },
   styles = StyleSheet.create({
     button: {
       contentStyle: {
@@ -20,19 +27,19 @@ const shadow = {
         padding: 14,
       },
       style: {
-        backgroundColor: colors.secondary,
-        borderRadius: 10,
-        alignSelf: 'center',
-        justifyContent: 'center',
-        marginTop: 30,
+        ...btnStyle,
         width: wp(90),
-      }
+      },
+      middle: {
+        ...btnStyle,
+        width: wp(42),
+      },
     },
     card: {
       backgroundColor: colors.secondary,
       borderWidth: 0,
       height: hp(15),
-      marginTop: 20,
+      marginTop: Platform.OS === 'ios' ? hp(1.5) : hp(2),
       padding: 20,
       width: wp(75),
       ...shadow
@@ -48,21 +55,21 @@ const shadow = {
       color: colors.background,
     },
     text: {
-      marginBottom: 5,
+      marginBottom: hp(1),
     },
     textGreyBold: {
       ...fontsSizes.normal,
       ...fonts.normal.bold,
-      marginTop: 20,
+      marginTop: Platform.OS === 'ios' ? hp(2) : hp(1),
       color: '#9B9898',
     },
     textGrey: {
       ...fonts.normal.bold,
       color: '#9B9898',
-      marginTop: 20,
+      marginTop: Platform.OS === 'ios' ? hp(2) : hp(1),
     },
     scrollView: {
-      height: hp(40),
+      height: Platform.OS === 'ios' ? hp(40) : hp(35),
     },
     preview: {
       borderRadius: 10,
@@ -70,7 +77,7 @@ const shadow = {
       width: 55,
     },
     layout: {
-      padding: 20,
+      padding: hp(2),
     },
     list: {
       borderRadius: 10,
@@ -80,18 +87,22 @@ const shadow = {
       ...shadow,
       alignSelf: 'center',
       borderRadius: 10,
-      height: hp(35),
+      height: hp(45),
       marginTop: 15,
-      marginBottom: 25,
+      marginBottom: Platform.OS === 'ios' ? hp(5) : hp(1),
       width: wp(90),
     },
     image: {
-      height: hp(35),
+      height: hp(45),
       width: wp(90),
     },
     box: {
       marginLeft: wp(5),
-    }
+    },
+    points: {
+      ...fonts.big.bold,
+      marginTop: 20
+    },
   })
 
 export default styles
